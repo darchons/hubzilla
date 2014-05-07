@@ -2,7 +2,7 @@
 
 # Build config for the build script, build.sh. Look there for more info.
 
-APP_NAME=youraddon
+APP_NAME=hubzilla
 CHROME_PROVIDERS="content locale"
 CLEAN_UP=1
 ROOT_FILES="bootstrap.js"

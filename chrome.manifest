@@ -1,3 +1,2 @@
-content    youraddon          content/
-locale     youraddon en-US    locale/en-US/
-locale     youraddon fr       locale/fr/
+content    hubzilla          content/
+locale     hubzilla en-US    locale/en-US/
