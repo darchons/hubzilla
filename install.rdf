@@ -9,8 +9,6 @@
         <em:bootstrap>true</em:bootstrap>
         <em:description>Bugzilla hub panel for Firefox for Android</em:description>
         <em:creator>Jim Chen</em:creator>
-        <em:optionsURL>chrome://hubzilla/content/options.xul</em:optionsURL>
-        <em:optionsType>2</em:optionsType>
 
         <!-- Mobile -->
         <em:targetApplication>
