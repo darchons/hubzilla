@@ -70,12 +70,12 @@ function fetchData(request) {
 function refreshDataset() {
   let storage = HomeProvider.getStorage(DATASET_ID);
   Task.spawn(function() {
-    yield storage.deleteAll();
-
     let requestee = yield fetchData({
         method: "MyDashboard.run_flag_query",
         params: { type: "requestee" }
     });
+
+    yield storage.deleteAll();
 
     yield storage.save(requestee.result.requestee.map(request => ({
       url: BUGZILLA_BUG_URL + request.bug_id,
