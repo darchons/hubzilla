@@ -101,13 +101,14 @@ function refreshDataset() {
   }).then(null, e => {
     Cu.reportError("Error refreshing dataset " + DATASET_ID + ": " + e);
 
-    let title = e.name || ("" + e);
-    let desc = e.message || "";
+    if (!e.name || !e.message) {
+      return;
+    }
 
     return storage.save([{
       url: BUGZILLA_BUG_URL,
-      title: title,
-      description: desc,
+      title: e.name,
+      description: e.message,
       image_url: IMG_ERROR_URL,
     }]);
   });
